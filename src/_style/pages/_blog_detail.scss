@@ -1,0 +1,134 @@
+@use '../abstracts/' as *;
+/*------------------------------------------------------------
+Css of blog page
+------------------------------------------------------------*/
+.blog-group__detail {
+  &inner {
+    width: 69%;
+    margin-top: 10px;
+
+    @include tab {
+      width: 100%;
+    }
+  }
+
+  &title {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 35px;
+
+    > h2 {
+      font-size: 3.2rem;
+      font-weight: 400;
+      color: $black-03;
+    }
+  }
+
+  &info {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 13px;
+  }
+
+  &date {
+    font-size: 1.6rem;
+    color: #303030;
+    flex-shrink: 0;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  &category {
+    font-size: 1.4rem;
+    color: $green-01;
+    margin-left: 16px;
+    position: relative;
+    top: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include sp {
+      font-size: 1.2rem;
+    }
+  }
+
+  &new {
+    font-family: $main-fonts;
+    color: #a93f4f;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+
+  &content {
+    padding: 0 20px;
+    margin-top: 42px;
+
+    @include tab {
+      padding: 0;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2;
+    }
+
+    figure {
+      margin: 42px 0;
+    }
+  }
+
+  &titlesub {
+    background: #fff;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding: 7.5px 27px;
+    position: relative;
+    margin: 67px 0 31px;
+    word-break: break-all;
+    letter-spacing: 0.3px;
+
+    @include sp {
+      font-size: 1.8rem;
+    }
+
+    &::after {
+      content: '';
+      height: calc(100% - 26px);
+      width: 6px;
+      background: #476c53;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.blog-detail {
+  .blog-group__detail {
+    padding-bottom: 0;
+  }
+
+  .c-btns {
+    text-align: center;
+    margin-top: 57px;
+    margin-bottom: 158px;
+    width: 100%;
+
+    @include tab {
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+
+    &__btn4 {
+      padding-left: 50px;
+    }
+  }
+}

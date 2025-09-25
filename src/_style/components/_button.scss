@@ -4,24 +4,250 @@
 /*------------------------------------------------------------
     Button
 ------------------------------------------------------------*/
-.c-btn1 {
-  display: inline-flex;
-  justify-content: center;
+.c-btns {
+  &__btn1 {
+    width: 100%;
+    max-width: 240px;
+    height: 54px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: $white-01;
+    position: relative;
+    border: 1px solid $grey-01;
+    text-transform: uppercase;
+    @include sp {
+      max-width: 270px;
+      height: 58px;
+      font-size: 1.6rem;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background: url(../../assets/img/common/icon-arr-right-black.png)
+        no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 9px;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      transition: 0.4s;
+    }
+
+    &:hover {
+      opacity: 1;
+      background: $green-01;
+      color: $white-01;
+      border: 1px solid $green-01;
+
+      &::after {
+        background: url(../../assets/img/common/icon-arr-right.png) no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 9px;
+        right: 20px;
+      }
+    }
+  }
+
+  &__btn2 {
+    color: $white-01;
+    border-bottom: 1px solid $white-01;
+    padding-bottom: 15px;
+    padding-right: 75px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background: url(../../assets/img/common/icon-arr-right.png) no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 9px;
+      top: 5px;
+      right: 0;
+      transition: 0.4s;
+    }
+  }
+
+  &__btn3 {
+    width: 100%;
+    max-width: 240px;
+    height: 54px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: $white-01;
+    position: relative;
+    border: 1px solid $grey-01;
+    text-transform: uppercase;
+    @include sp {
+      max-width: 270px;
+      height: 58px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: url(../../assets/img/common/icon-arr-left-black.png) no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 9px;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      transition: 0.4s;
+    }
+
+    &:hover {
+      opacity: 1;
+      background: $black-02;
+      color: $white-01;
+      border: 1px solid $black-02;
+
+      &::before {
+        background: url(../../assets/img/common/icon-arr-left.png) no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 9px;
+        left: 20px;
+      }
+    }
+  }
+
+  &__btn4 {
+    color: $black-01;
+    border-bottom: 1px solid $black-01;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: url(../../assets/img/common/icon-arr-left-black.png) no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 9px;
+      top: 5px;
+      left: 0;
+      transition: 0.4s;
+    }
+  }
+
+  &__btn5 {
+    width: 100%;
+    max-width: 270px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: $red-01;
+    color: $white-01;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include sp {
+      max-width: 270px;
+      height: 58px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background: url(../../assets/img/common/icon-arr-right.png) no-repeat;
+      background-size: contain;
+      width: 20px;
+      height: 9px;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      transition: 0.4s;
+    }
+
+    &:hover {
+      opacity: 1;
+      background: $black-02;
+      color: $white-01;
+    }
+  }
+}
+
+.c-btn__fill {
+  background: #333;
+  border: 1px solid #333;
+  color: $white-01;
+  width: 270px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  min-height: 44px;
-  min-width: 140px;
-  padding: 0 30px;
-  font-family: $en-fonts;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
   font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.625rem;
-  border-radius: 50px;
-  background-color: $black;
-  color: $white;
-  transition: none;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &::before {
+    content: '';
+    width: 21px;
+    aspect-ratio: 21 / 10;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    background: #fff;
+    transform: translateY(-50%);
+    transform: translateY(-50%);
+    mask: url(../../assets/img/common/arrow-btn.png) no-repeat center center /
+      contain;
+    mask: url(../../assets/img/common/arrow-btn.png) no-repeat center center /
+      contain;
+    transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
 
   &:hover {
-    background-color: color.adjust($color: $black, $lightness: 5%);
-    opacity: 1;
+    background: $white-01;
+
+    &::before {
+      background: #a93f4f;
+    }
+  }
+
+  &--danger {
+    background: $red-01;
+    border-color: $red-01;
+
+    &:hover {
+      color: #a93f4f;
+    }
   }
 }

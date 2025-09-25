@@ -1,27 +1,194 @@
-<header class="c-header js-header">
-  <div class="c-header__logo">
-    <a href="<%= baseUrl() %>">
-      <img src="/assets/img/logo.png" alt="Logo" srcset="/assets/img/logo@2x.png 2x">
-    </a>
-  </div>
-  <nav class="c-gnav">
-    <ul>
-      <% if (typeof linklists != 'undefined') { %>
-        <% linklists.main && linklists.main.forEach(link => { %>
-          <li>
-            <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
-            <% if (link.links) { %>
-              <ul>
-                <% link.links.forEach(child_link => { %>
-                  <li>
-                    <a <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
-                  </li>
-                <% }) %>
-              </ul>
-            <% } %>
-          </li>
-        <% }) %>
-      <% } %>
-    </ul>
-  </nav>
+<header id="header" class="c-header c-header--bg">
+    <div class="c-header__container">
+        <h1 class="c-header__logo">
+            <a href="index.html">
+                <img src="assets/img/common/logo.png" alt="NEST HOUSE">
+            </a>
+        </h1>
+        <div class="c-header__group">
+            <div class="c-menu">
+                <ul class="c-menu__pc">
+                    <li class="c-menu__item">
+                        <a class="c-menu__text" href="about.html">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li class="c-menu__item">
+                        <a class="c-menu__text"
+                            href="index.html#s-event">
+                            EVENT
+                        </a>
+                    </li>
+                    <li class="c-menu__item">
+                        <a class="c-menu__text" href="works.html">
+                            WORKS
+                        </a>
+                    </li>
+                    <li class="c-menu__item">
+                        <a class="c-menu__text"
+                            href="index.html#s-lineup">
+                            LINEUP
+                        </a>
+                    </li>
+                    <li class="c-menu__item">
+                        <a class="c-menu__text"
+                            href="index.html#s-model">
+                            MODEL HOUSE
+                        </a>
+                    </li>
+                    <li class="c-menu__item">
+                        <a class="c-menu__text" href="#">
+                            ESTATE
+                        </a>
+                    </li>
+                    <li class="c-menu__item">
+                        <a class="c-menu__text c-menu__text--icon" href="#">
+                            REFORM
+                        </a>
+                    </li>
+                </ul>
+                <div class="c-menu__sp">
+                    <div class="c-menu__container">
+                        <ul class="c-menu__main">
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text c-menu__text--anchor"
+                                    href="index.html#s-event">
+                                    EVENT
+                                </a>
+                            </li>
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text"
+                                    href="about.html">
+                                    ABOUT
+                                </a>
+                                <span class="c-menu__click"></span>
+                                <ul
+                                    class="c-menu__submenu c-menu__submenu--dropdown">
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="about.html">
+                                            構造と性能
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="about.html">
+                                            選ばれる理由
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="about.html">
+                                            家づくりの流れ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="about.html">
+                                            よくある質問
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text" href="works.html">
+                                    WORKS
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="c-menu__main">
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a href="index.html#s-lineup"
+                                    class="c-menu__text c-menu__text--anchor">
+                                    <span>LINEUP</span>
+                                </a>
+                                <span class="c-menu__click"></span>
+                                <ul
+                                    class="c-menu__submenu c-menu__submenu--dropdown">
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="index.html#A">
+                                            FASTA
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="index.html#A">
+                                            MAno
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="index.html#A">
+                                            蔵掛の家
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="c-menu__text c-menu__text--anchor"
+                                            href="index.html#A">
+                                            平屋
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text c-menu__text--anchor"
+                                    href="voice.html">
+                                    VOICE
+                                </a>
+                            </li>
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text" href="#">
+                                    ESTATE
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="c-menu__main">
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text c-menu__text--icon"
+                                    href="#">
+                                    REFORM
+                                </a>
+                            </li>
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text" href="blog.html">
+                                    BLOG
+                                </a>
+                            </li>
+                            <li class="c-menu__item c-menu__item--custom">
+                                <a class="c-menu__text" href="company.html">
+                                    COMPANY
+                                </a>
+                            </li>
+                            <li
+                                class="c-menu__item c-menu__item--custom c-menu__item--bgg">
+                                <a class="c-menu__text" href="#">
+                                    モデルハウス来場予約
+                                </a>
+                            </li>
+                            <li
+                                class="c-menu__item c-menu__item--custom c-menu__item--bgr">
+                                <a class="c-menu__text" href="#">
+                                    お問い合わせ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="c-menu__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
 </header>

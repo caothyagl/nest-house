@@ -1,0 +1,416 @@
+@use '../abstracts/' as *;
+/*------------------------------------------------------------
+Css of voice detail page
+------------------------------------------------------------*/
+.voice-detail {
+  .c-title {
+    width: 189px;
+    font-size: 1.6rem;
+    color: $green-01;
+    letter-spacing: 1.5px;
+
+    @include tab {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__single {
+    padding-top: 100px;
+
+    .l-container {
+      max-width: 1000px;
+    }
+
+    @include tab {
+      padding-top: 50px;
+    }
+
+    &head {
+      display: block;
+      font-family: $notosans-fonts;
+    }
+
+    &banner {
+      width: 100%;
+      margin-bottom: 39px;
+      height: 540px;
+
+      @include tab {
+        height: 100%;
+        margin-bottom: 15px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &text {
+      width: 100%;
+    }
+
+    &title {
+      font-size: 3.2rem;
+
+      @include tab {
+        font-size: 2.3rem;
+      }
+
+      @include sp {
+        font-size: 1.8rem;
+      }
+    }
+
+    &category {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 10px;
+      margin: 18px 0 0;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    &content {
+      font-size: 1.6rem;
+      margin-top: 37px;
+      line-height: 1.9;
+      letter-spacing: 0.1px;
+
+      @include sp {
+        font-size: 1.4rem;
+        margin-top: 20px;
+      }
+    }
+
+    &cate {
+      color: $black-01;
+      font-size: 14px;
+    }
+
+    &body {
+      margin-top: 92px;
+      padding-bottom: 92px;
+      font-family: $notosans-fonts;
+
+      @include sp {
+        margin-top: 50px;
+        padding-bottom: 50px;
+      }
+    }
+
+    &message {
+      background: $white-01;
+      padding: 45px 37px;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto 97px;
+
+      @include sp {
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+
+      .c-title {
+        margin-bottom: 22px;
+      }
+
+      .c-content {
+        font-size: 1.6rem;
+        line-height: 2;
+        font-family: $notosans-fonts;
+        padding: 0 3px;
+        letter-spacing: 0.1px;
+
+        @include sp {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  &__owner {
+    font-family: $notosans-fonts;
+    background: $white-03;
+    border-bottom: 1px solid $grey-01;
+
+    .l-container {
+      max-width: 1000px;
+    }
+
+    &inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 50px 0 57px;
+
+      @include sp {
+        display: block;
+        padding-bottom: 0;
+      }
+    }
+
+    &content {
+      width: 68.75%;
+
+      @include sp {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    &title {
+      font-size: 2.4rem;
+      line-height: 2.5;
+
+      @include sp {
+        line-height: 1.5;
+        font-size: 2rem;
+      }
+    }
+
+    &des {
+      font-size: 1.6rem;
+      line-height: 1.875;
+      margin-top: 5px;
+
+      span {
+        color: $red-01;
+        font-weight: 700;
+      }
+    }
+
+    &images {
+      position: absolute;
+      max-width: 240px;
+      width: 30%;
+      bottom: 0;
+      right: 0;
+
+      @include sp {
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .c-btns {
+      margin-top: 23px;
+
+      &__btn5 {
+        @include sp {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &__other {
+    padding: 64px 0 160px;
+
+    @include sp {
+      padding: 50px 0;
+    }
+
+    &title {
+      width: 100%;
+      font-size: 1.6rem;
+      color: #476c53;
+      @include sp {
+        margin-bottom: 0;
+      }
+    }
+
+    &list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      row-gap: 67px;
+      margin-top: 44px;
+
+      @include tab {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        row-gap: 30px;
+      }
+
+      @include sp {
+        display: block;
+        margin-top: 20px;
+      }
+
+      .c-voice__item {
+        margin-bottom: 37px;
+        display: block;
+      }
+
+      .c-btns {
+        text-align: right;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: '';
+          border-top: 1px dashed #ccc;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          transform: translateY(-50%);
+          height: 1px;
+          width: 100%;
+        }
+
+        &__btn2 {
+          color: #476c53;
+          border-bottom: 0;
+          padding-right: 30px;
+          padding-left: 10px;
+          background: $white-02;
+
+          &::after {
+            background: url(../../assets/img/common/icon-arr-right-green.png)
+              no-repeat;
+            background-size: contain;
+            top: 0;
+
+            @include sp {
+              top: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .c-btns--other {
+      text-align: center;
+
+      &__btn4 {
+        padding-left: 50px;
+      }
+    }
+  }
+}
+
+.question {
+  margin-bottom: 61px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    background: $white-01;
+    padding: 5px 10px;
+    font-weight: normal;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-icon {
+    font-size: 2.4rem;
+    background: $green-01;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white-01;
+    padding-bottom: 5px;
+    margin-right: 20px;
+
+    @include sp {
+      margin-right: 10px;
+    }
+  }
+
+  &-ttl {
+    padding-top: 5px;
+    font-size: 2rem;
+    width: 90%;
+    @include sp {
+      font-size: 1.6rem;
+      padding-top: 0;
+    }
+  }
+
+  &-content {
+    font-size: 1.6rem;
+    line-height: 2;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.question-viewimg {
+  margin: 50px auto 39px;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include sp {
+    margin: 30px auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &--2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    .c-img1 {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &--1,
+  &--2 {
+    @include sp {
+      display: block;
+    }
+
+    figure {
+      @include sp {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .c-img1 {
+      @include sp {
+        margin-bottom: 20px;
+        display: block;
+      }
+    }
+  }
+}

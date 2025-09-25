@@ -1,5 +1,123 @@
 @use '../abstracts' as *;
 
 /*------------------------------------------------------------
-    Title
+title
 ------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-title {
+  &__main {
+    font-size: 5rem;
+    line-height: 1.6;
+    color: $green-01;
+    font-family: $main-fonts;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    @include sp {
+      font-size: 3.9rem;
+    }
+  }
+
+  &__sub {
+    font-size: 1.4rem;
+    font-family: $notosans-fonts;
+    margin-top: 2px;
+    letter-spacing: 0.1em;
+
+    @include sp {
+      margin-top: 5px;
+    }
+  }
+
+  &__img {
+    width: 164px;
+    height: 122px;
+    margin-top: 16px;
+    margin-left: 5px;
+
+    @include tab {
+      width: 100px;
+      height: 85px;
+      margin: 5px auto 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.c-mv__title {
+  .c-title__main {
+    // padding-left: 5px;
+
+    @include sp {
+      padding-left: 0;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .c-title__sub {
+    padding-left: 4px;
+    @include sp {
+      padding-left: 0;
+    }
+  }
+}
+
+.c-title2 {
+  position: relative;
+  padding-bottom: 42px;
+
+  h2 {
+    font-size: 3.6rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 8px;
+    background-color: $green-01;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.c-ttl-underline {
+  font-size: 3.6rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.3888888889;
+  text-transform: uppercase;
+  color: $black-01;
+
+  @include tab {
+    font-size: 2.4rem;
+  }
+
+  &::after {
+    content: '';
+    width: 40px;
+    aspect-ratio: 40 / 8;
+    display: block;
+    background: #476c53;
+    margin: 37px auto 0;
+
+    @include tab {
+      width: 30px;
+      margin-top: 20px;
+      aspect-ratio: 40 / 4;
+    }
+  }
+}

@@ -1,14 +1,36 @@
 //baseWidth
 $base-width: 1200px;
 $header-height: 80px;
+$wrapper-width: 1326px;
 
+//font
+$main-fonts: 'Montserrat', sans-serif;
+$notosans-fonts: 'Noto Sans JP', sans-serif;
 $jp-fonts: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro',
   'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
-$en-fonts: 'Inter', sans-serif;
 
 //color common
-$primary: #ede939;
-$secondary: #002855;
+$white-01: #fff;
+$white-02: #f7f6f2;
+$white-03: #e9e7df;
 
-$white: #fff;
-$black: #051a2b;
+$red-01: #a93f4f;
+
+$green-01: #476c53;
+$green-02: #345e42;
+$green-03: #4e5547;
+
+$black-01: #333;
+$black-02: #000;
+$black-03: #303030;
+$black-04: #222;
+$black-05: #111;
+$black-06: #1e140e;
+$black-07: #1b1f1d;
+
+$grey-01: #ccc;
+$grey-02: #666;
+$grey-03: #d7dbe3;
+$grey-04: #999;
+
+$orange-01: #bdab69;

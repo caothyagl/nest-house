@@ -3,3 +3,567 @@
 /*------------------------------------------------------------
     Other
 ------------------------------------------------------------*/
+main {
+  margin-top: 130px;
+  @include sp {
+    margin-top: 70px;
+  }
+}
+
+.c-breadcrumb {
+  display: table;
+
+  &__item {
+    margin-right: 35px;
+    position: relative;
+    display: inline;
+    font-size: 1.3rem;
+    font-family: $notosans-fonts;
+
+    &::after {
+      position: absolute;
+      content: '>';
+      font-size: 1.3rem;
+      line-height: 1.6;
+      margin-left: 14px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------------------
+other
+------------------------------------------------------------*/
+.pc-not {
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+}
+
+.only-sp {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+// Parallax
+.c-parallax {
+  position: relative;
+  background: $green-03;
+  overflow: hidden;
+  // @include tab {
+  //     height: 650px;
+  // }
+
+  // @include sp {
+  //     height: 700px;
+  // }
+
+  .parallax__container {
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: $white-01;
+    padding-top: 71px;
+    padding-bottom: 114px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4))
+      drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+    @include tab {
+      display: block;
+    }
+
+    @include sp {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 89px;
+    }
+  }
+
+  &__text {
+    font-family: $notosans-fonts;
+    width: 100%;
+    max-width: 450px;
+    padding-right: 20px;
+    @include tab {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include sp {
+      text-align: left;
+      padding-right: 0;
+    }
+
+    &img {
+      width: 275px;
+      height: 83px;
+      position: relative;
+      left: -100px;
+
+      @include tab {
+        left: 0;
+        margin: 0 auto;
+      }
+
+      @include sp {
+        margin: 0;
+        width: 204px;
+        height: 79px;
+      }
+    }
+
+    &title {
+      font-weight: normal;
+      font-size: 3.6rem;
+      margin-top: 32px;
+      letter-spacing: 0.1em;
+      line-height: 1.7;
+      @include sp {
+        margin: 0;
+        font-size: 2.6rem;
+        letter-spacing: 6px;
+      }
+    }
+
+    &sub {
+      font-weight: 100;
+      font-size: 1.4rem;
+      margin-top: 22px;
+      letter-spacing: 0.1em;
+      @include sp {
+        font-size: 1.2rem;
+        margin-top: 17px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 510px;
+    padding-top: 120px;
+
+    @include tab {
+      padding-top: 30px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    @include sp {
+      padding-top: 40px;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.5;
+      font-family: $notosans-fonts;
+
+      @include sp {
+        line-height: 1.85;
+        font-weight: 100;
+      }
+    }
+
+    .c-btns {
+      margin-top: 33px;
+      text-align: right;
+      @include tab {
+        text-align: center;
+      }
+
+      @include sp {
+        margin-top: 40px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.parallax {
+  position: fixed;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.parallax__container {
+  clip: rect(0, auto, auto, 0);
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+}
+
+.parallax-pc {
+  @include sp {
+    display: none;
+  }
+}
+
+.parallax-sp {
+  display: none;
+  @include sp {
+    display: block;
+    background-position-x: -235px;
+  }
+}
+//MV Banner
+.c-mv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+
+  @include tab {
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    width: 27%;
+    @include tabpc {
+      width: 37%;
+    }
+    @include tab {
+      margin-top: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    max-width: 58.5%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    @include tab {
+      max-width: 100%;
+    }
+
+    @include sp {
+      height: 150px;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 63%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+/*
+------------------------------------------------------------*/
+//paginate
+.c-paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  min-height: 55px;
+  margin-bottom: 150px;
+
+  @include sp {
+    min-height: 50px;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+  }
+
+  .c-btns {
+    width: 240px;
+    position: absolute;
+    top: 0;
+    @include tab {
+      width: 160px;
+    }
+
+    @include sp {
+      width: 50px;
+    }
+
+    &__btn1,
+    &__btn3 {
+      border: 0;
+      font-size: 1.6rem;
+
+      @include sp {
+        height: 50px;
+      }
+
+      span {
+        @include sp {
+          display: none;
+        }
+      }
+    }
+
+    &:first-child {
+      left: 0;
+    }
+
+    &:last-child {
+      right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      a {
+        padding: 12px 13px;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+
+        @include sp {
+          font-size: 1.4rem;
+        }
+      }
+
+      .c-active {
+        color: $green-01;
+        font-weight: 700;
+      }
+    }
+  }
+}
+/*
+------------------------------------------------------------*/
+//sidebar
+.c-sidebar {
+  margin-bottom: 30px;
+  margin-top: 11px;
+  font-family: $notosans-fonts;
+  width: 100%;
+
+  @include sp {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    margin-bottom: 41px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    background: $white-03;
+    width: 100%;
+    padding: 10.5px 15px;
+    font-weight: 400;
+    color: $black-03;
+    margin-bottom: 20px;
+  }
+
+  .c-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    input {
+      border: 1px solid $grey-03;
+      width: calc(100% - 80px);
+      padding: 5px;
+      font-size: 1.4rem;
+      background-color: $white-01;
+    }
+
+    &__btn {
+      width: 56px;
+      height: 30px;
+      border: 1px solid $green-01;
+      cursor: pointer;
+      background: $green-01;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      color: $white-01;
+      font-size: 1.6rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      white-space: nowrap;
+      font-family: $notosans-fonts;
+    }
+  }
+}
+
+.c-sidebar__content {
+  margin-top: -12px;
+
+  li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      -webkit-box-flex: 0;
+      flex: 0 0 8px;
+      flex: 0 0 8px;
+      width: 8px;
+      height: 7px;
+      background: $green-01;
+      clip-path: polygon(0 0, 0% 100%, 80% 50%);
+      clip-path: polygon(0 0, 0% 100%, 80% 50%);
+      margin-right: 6px;
+    }
+
+    a {
+      padding: 5.5px 0;
+      color: #303030;
+      font-size: 1.6rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 230px;
+    }
+
+    .c-icon {
+      margin-left: 4px;
+      position: relative;
+      width: 16px;
+      height: 16px;
+      background: $green-01;
+      border: 1px solid $green-01;
+      transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background: #fff;
+        transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+      }
+
+      &::before {
+        width: 1px;
+        height: 7px;
+        left: 7px;
+        top: 4px;
+      }
+
+      &::after {
+        width: 7px;
+        height: 1px;
+        left: 4px;
+        top: 7px;
+      }
+    }
+  }
+
+  .active {
+    .c-icon {
+      background: $white-01;
+
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        background: $green-03;
+      }
+    }
+  }
+
+  .c-sidebar__dropdown {
+    a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      width: 93%;
+      cursor: pointer;
+
+      @include tab {
+        width: 98%;
+      }
+
+      @include sp {
+        width: 94%;
+      }
+    }
+  }
+
+  .c-sidebar__sub {
+    display: none;
+    padding-left: 20px;
+    margin-top: 0;
+    width: 100%;
+
+    a {
+      padding: 4px 0;
+    }
+  }
+}
+/*
+------------------------------------------------------------*/
+//contact

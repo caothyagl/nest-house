@@ -1,5 +1,1308 @@
 @use '../abstracts/' as *;
-
 /*------------------------------------------------------------
-    Top page
+Css of home page
 ------------------------------------------------------------*/
+.pc-not {
+  .c-btns__voice {
+    &::before {
+      display: none;
+    }
+
+    .c-btns__btn1 {
+      margin: 0 auto;
+
+      @include sp {
+        max-width: 225px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.top {
+  .c-slide__zoom.swiper-slide-prev,
+  .c-slide__zoom.swiper-slide-duplicate-active,
+  .c-slide__zoom.swiper-slide-active {
+    img {
+      animation: zoomInOut 15s linear 0s 1 normal both;
+    }
+  }
+
+  &-mainvisual {
+    width: calc(100% - 80px);
+    height: calc(100vh - 180px);
+    margin: 130px auto 0;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    @include tab {
+      width: calc(100% - 40px);
+    }
+    @include sp {
+      margin-top: 70px;
+      width: calc(100% - 40px);
+      height: calc(100vh - 110px);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__text {
+      z-index: 20;
+      color: $white-01;
+      width: 100%;
+      padding: 0 0 43px 62px;
+      @include sp {
+        padding-left: 17px;
+        padding-bottom: 45px;
+      }
+
+      &-img {
+        margin-bottom: 5px;
+
+        @include sp {
+          width: 93px;
+          margin-bottom: 11px;
+        }
+
+        img {
+          width: 133px;
+          height: 158px;
+
+          @include sp {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &-title {
+        font-size: 3.2rem;
+        margin-bottom: 8px;
+        font-weight: normal;
+        font-family: $notosans-fonts;
+        padding-left: 50px;
+        letter-spacing: 0.1em;
+        text-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+
+        @include sp {
+          font-size: 2.7rem;
+          padding-left: 15px;
+          margin-bottom: 4px;
+        }
+      }
+
+      &-content {
+        font-size: 1.3rem;
+        padding-left: 54px;
+        line-height: 1.8;
+        letter-spacing: 0.1em;
+        font-family: $notosans-fonts;
+        text-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+
+        @include sp {
+          font-size: 9px;
+          padding-left: 17px;
+          letter-spacing: 0;
+        }
+      }
+    }
+
+    &__carousel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        background: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          from(rgb(30, 20, 14)),
+          color-stop(59%, rgba(30, 20, 14, 0))
+        );
+        background: -webkit-linear-gradient(
+          bottom,
+          rgb(30, 20, 14) 0%,
+          rgba(30, 20, 14, 0) 59%
+        );
+        background: linear-gradient(
+          0deg,
+          rgb(30, 20, 14) 0%,
+          rgba(30, 20, 14, 0) 59%
+        );
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        left: 0;
+      }
+    }
+
+    &__slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 1px;
+      min-height: 1px;
+      width: 100%;
+      height: 100%;
+
+      &-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 0.5s ease;
+      }
+
+      .img1 {
+        z-index: 2; /* ban đầu nằm trên */
+      }
+
+      .img2 {
+        z-index: 1;
+      }
+    }
+
+    &__reservation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -50px;
+      right: -40px;
+      height: 100px;
+      width: 240px;
+      z-index: 50;
+      background: $green-01;
+      color: $white-01;
+      padding-right: 26px;
+
+      @include tab {
+        right: -20px;
+      }
+      @include sp {
+        width: 193.5px;
+        right: -20px;
+        bottom: -40px;
+        height: 70px;
+        padding-right: 5px;
+      }
+
+      &-img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+
+        @include sp {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &-content {
+        p {
+          &:first-child {
+            font-family: $main-fonts;
+            @include sp {
+              font-size: 1rem;
+            }
+          }
+
+          &:last-child {
+            font-family: $notosans-fonts;
+            font-weight: 700;
+            @include sp {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* END MAIN VISUAL */
+  /* ======================================================== */
+  // EVENT
+  .top-event {
+    padding: 119px 0 139px;
+
+    @include sp {
+      padding: 123px 0 100px;
+    }
+
+    .c-container {
+      max-width: 1185px;
+    }
+
+    .c-title {
+      text-align: center;
+      margin-bottom: 66px;
+
+      @include sp {
+        margin-bottom: 46px;
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      @include tab {
+        gap: 20px;
+      }
+      @include sp {
+        display: block;
+      }
+    }
+
+    &__item {
+      @include sp {
+        margin-bottom: 44px;
+        display: block;
+      }
+
+      &img {
+        overflow: hidden;
+        margin-bottom: 20px;
+        display: grid;
+
+        @include sp {
+          margin-bottom: 15px;
+        }
+
+        img {
+          transition: 0.4s;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__category {
+      display: flex;
+      align-items: center;
+      margin-bottom: 13px;
+
+      @include sp {
+        margin-bottom: 9px;
+      }
+    }
+
+    &__cate {
+      background: $white-01;
+      color: $white-01;
+      padding: 2px 12px;
+      font-size: 1.2rem;
+      margin-right: 10px;
+      font-family: $notosans-fonts;
+
+      &--red {
+        background: $red-01;
+      }
+
+      &--orange {
+        background: $orange-01;
+      }
+
+      &--green {
+        background: $green-01;
+      }
+
+      &--grey {
+        background: $grey-01;
+        color: $grey-04;
+      }
+    }
+
+    &__new {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: $red-01;
+    }
+
+    &__title {
+      font-family: $notosans-fonts;
+      font-size: 1.6rem;
+      font-weight: normal;
+      margin-bottom: 13px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @include sp {
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+        font-size: 1.8rem;
+        line-height: 1.4;
+      }
+    }
+
+    &__content {
+      font-family: $notosans-fonts;
+
+      @include sp {
+        font-size: 1.3rem;
+      }
+    }
+
+    .c-btns {
+      margin-top: 67px;
+
+      @include sp {
+        margin-top: 48px;
+      }
+
+      &__btn1 {
+        margin: 0 auto;
+      }
+    }
+  }
+  /* END EVENT */
+  /* ======================================================== */
+  // WORKS
+  .top-works {
+    padding: 118px 0 140px;
+    position: relative;
+
+    @include sp {
+      padding-top: 81px;
+      padding-bottom: 90px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: url(../../assets/img/top/background-works.jpg) no-repeat;
+      background-size: cover;
+      width: calc(100% - 204px);
+      height: 1102px;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      @include sp {
+        width: calc(100% - 73px);
+        height: 912px;
+      }
+    }
+
+    .c-title {
+      text-align: center;
+
+      &__main {
+        @include sp {
+          letter-spacing: 0;
+        }
+      }
+
+      &__sub {
+        margin-top: 4px;
+      }
+    }
+
+    &__slider {
+      overflow: visible;
+      width: 85%;
+
+      @include tab {
+        width: calc(100% - 40px);
+      }
+    }
+
+    &__list {
+      margin: 67px 0 46px;
+      overflow: hidden;
+      @include sp {
+        margin-top: 44px;
+      }
+
+      .swiper-wrapper {
+        padding-bottom: 26px;
+        @include sp {
+          padding-bottom: 24px;
+        }
+      }
+
+      .swiper-scrollbar {
+        left: 0;
+        height: 2px;
+        width: 100%;
+        opacity: 1 !important;
+        background: $white-01;
+
+        @include sp {
+          height: 1px;
+        }
+
+        &-drag {
+          background: $green-01;
+        }
+      }
+    }
+
+    .c-btns {
+      &__btn1 {
+        margin: 0 auto;
+      }
+    }
+  }
+  /* END WORKS */
+  /* ======================================================== */
+  // LINE UP
+  .top-lineup {
+    padding: 117px 0 126px;
+
+    @include sp {
+      padding: 90px 0 50px;
+    }
+
+    .l-container {
+      max-width: 1200px;
+
+      @include sp {
+        padding: 0 37px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @include tab {
+        display: block;
+      }
+
+      &text {
+        width: 100%;
+        max-width: 260px;
+
+        @include tab {
+          max-width: 100%;
+          text-align: center;
+        }
+
+        .c-title {
+          margin-bottom: 38px;
+
+          @include sp {
+            margin-bottom: 35px;
+          }
+
+          &__main {
+            margin-left: -5px;
+
+            @include sp {
+              letter-spacing: 1px;
+              margin-left: 0;
+            }
+          }
+
+          &__sub {
+            letter-spacing: 0;
+          }
+        }
+
+        .c-btns {
+          margin-bottom: 49px;
+
+          @include tab {
+            display: none;
+          }
+
+          &__btn1 {
+            max-width: 200px;
+            height: 45px;
+          }
+        }
+
+        .c-lineup__bagimg {
+          @include tab {
+            display: none;
+          }
+        }
+      }
+
+      &items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 840px;
+        margin-top: 22px;
+
+        @include tabpc {
+          padding-left: 20px;
+        }
+        @include tab {
+          padding-left: 0;
+          max-width: 100%;
+        }
+        @include sp {
+          margin-top: 32px;
+          margin-bottom: 38px;
+        }
+      }
+    }
+
+    .c-btns {
+      &__btn1 {
+        margin: 0 0 30px;
+        @include tab {
+          margin: 0 auto 30px;
+        }
+        @include sp {
+          margin: 0 auto 30px;
+        }
+      }
+    }
+
+    &__des {
+      margin-bottom: 43px;
+      font-family: $notosans-fonts;
+      font-size: 1.6rem;
+      line-height: 2;
+
+      @include sp {
+        text-align: left;
+        line-height: 1.9;
+        margin-bottom: 0;
+      }
+    }
+
+    &__bagimg {
+      @include tab {
+        text-align: center;
+      }
+      @include sp {
+        text-align: left;
+      }
+
+      img {
+        width: 130px;
+        height: 116px;
+      }
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 47.7%;
+      margin-bottom: 38px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include tab {
+        max-width: 48.5%;
+        height: 100%;
+      }
+
+      @include sp {
+        max-width: 100%;
+        height: 100%;
+        margin-bottom: 38px;
+      }
+
+      &:nth-of-type(3) {
+        @include sp {
+          margin-bottom: 43px;
+        }
+      }
+    }
+
+    &__viewimg {
+      height: 268px;
+      overflow: hidden;
+      margin-bottom: 16px;
+
+      @include tab {
+        height: 100%;
+      }
+      @include sp {
+        margin-bottom: 8px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      margin-bottom: 4px;
+      font-family: $notosans-fonts;
+      @include sp {
+        margin-bottom: 0;
+        font-size: 1.6rem;
+        letter-spacing: -0.2px;
+      }
+    }
+
+    &__title {
+      font-size: 3.2rem;
+      color: $green-01;
+      font-weight: normal;
+      @include sp {
+        font-size: 3rem;
+      }
+    }
+
+    &__titlenoto {
+      font-size: 2.8rem;
+      font-family: $notosans-fonts;
+      margin-top: 8px;
+      @include sp {
+        margin-top: 2px;
+      }
+    }
+  }
+  /* END LINE UP */
+  /* ======================================================== */
+  // MODEL HOUSE
+  .top-model {
+    padding: 0 0 139px;
+
+    @include sp {
+      padding-bottom: 100px;
+    }
+
+    .l-container {
+      @include sp {
+        padding: 0;
+      }
+    }
+
+    .c-parallax {
+      height: 367px;
+      background: $black-06;
+
+      @include sp {
+        height: 199px;
+      }
+
+      &::after {
+        background: $black-06;
+        opacity: 0.1;
+      }
+    }
+
+    .parallax__container {
+      opacity: 0.9;
+    }
+
+    .c-title {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: -22px;
+
+      @include sp {
+        margin-top: -10px;
+        margin-bottom: 39px;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        background: $white-02;
+        width: 100%;
+        height: 180px;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        @include sp {
+          height: 160px;
+        }
+      }
+
+      &__main {
+        @include sp {
+          font-size: 3.5rem;
+          line-height: 1.3;
+          letter-spacing: 4px;
+        }
+      }
+
+      &__sub {
+        margin-top: 4px;
+        letter-spacing: 0;
+
+        @include sp {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    &__des {
+      text-align: center;
+      font-size: 1.6rem;
+      font-family: $notosans-fonts;
+
+      @include sp {
+        line-height: 1.9;
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      margin: 66px 0 55px;
+      column-gap: 1px;
+
+      @include sp {
+        display: block;
+        margin: 43px 0 46px;
+      }
+    }
+
+    &__item {
+      text-align: center;
+      font-family: $notosans-fonts;
+      margin-bottom: 13px;
+
+      @include sp {
+        margin-bottom: 45px;
+      }
+
+      &:last-of-type {
+        @include sp {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__img {
+      margin-bottom: 14px;
+
+      @include sp {
+        overflow: hidden;
+        margin-bottom: 17px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      color: $green-01;
+      font-size: 2rem;
+      margin-bottom: 11px;
+      font-weight: normal;
+      @include sp {
+        margin-bottom: 6px;
+        font-size: 2.1rem;
+        letter-spacing: -0.3px;
+      }
+    }
+
+    &__content {
+      span {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          position: absolute;
+          content: '';
+          background: url(../../assets/img/common/icon-map.png) no-repeat;
+          background-size: cover;
+          width: 14px;
+          height: 20px;
+          top: 0;
+          left: 0;
+
+          @include sp {
+            width: 10px;
+            height: 14px;
+            top: 4px;
+            left: 2px;
+          }
+        }
+      }
+    }
+
+    .c-btns {
+      &__btn1 {
+        margin: 30px auto 0;
+      }
+    }
+  }
+  /* END MODEL HOUSE */
+  /* ======================================================== */
+  // VOICE
+  .top-voice {
+    padding: 141px 0 70px;
+    background: $white-03;
+
+    @include sp {
+      padding: 55px 0 99px;
+    }
+
+    .l-container {
+      max-width: 1200px;
+    }
+
+    &__list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @include tab {
+        display: block;
+      }
+
+      &text {
+        width: 100%;
+        max-width: 260px;
+
+        @include tab {
+          max-width: 100%;
+        }
+
+        .c-title {
+          text-align: center;
+          margin-bottom: 44px;
+          padding-left: 29px;
+
+          @include tab {
+            padding-left: 0;
+          }
+
+          @include sp {
+            margin-top: 8px;
+          }
+
+          &__main {
+            @include sp {
+              letter-spacing: 0;
+            }
+          }
+        }
+
+        .c-btns {
+          margin-bottom: 30px;
+          margin-right: 20px;
+
+          @include tab {
+            display: none;
+          }
+
+          &::before {
+            display: none;
+          }
+
+          &__btn1 {
+            max-width: 200px;
+            height: 45px;
+            margin: 0 0 0 auto;
+          }
+        }
+      }
+
+      &items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        width: 100%;
+        max-width: 840px;
+
+        @include tab {
+          max-width: 100%;
+          gap: 20px;
+        }
+        @include sp {
+          display: block;
+          margin-bottom: 29px;
+        }
+      }
+    }
+
+    &__des {
+      margin-bottom: 30px;
+      font-family: $notosans-fonts;
+      font-size: 1.6rem;
+    }
+
+    &__bookimg {
+      @include tab {
+        text-align: center;
+        padding-right: 150px;
+      }
+
+      img {
+        width: 138px;
+        height: 116px;
+      }
+    }
+
+    &__item {
+      max-width: 405px;
+      opacity: 1;
+      @include tab {
+        max-width: 100%;
+      }
+
+      @include sp {
+        max-width: 100%;
+        display: block;
+      }
+    }
+
+    &__viewimg {
+      height: 268px;
+    }
+  }
+  /* END VOICE */
+  /* ======================================================== */
+  // BLOG
+  .top-blog {
+    padding: 119px 0 83px;
+
+    @include sp {
+      padding: 85px 0 47px;
+    }
+
+    .l-container {
+      max-width: 1000px;
+    }
+
+    .l-container--flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .c-title {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      @include sp {
+        display: block;
+        text-align: center;
+      }
+
+      &__main {
+        @include sp {
+          letter-spacing: 0;
+        }
+      }
+
+      &__sub {
+        margin-left: 10px;
+
+        @include sp {
+          margin-left: 0;
+          margin-top: 0;
+        }
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 33px;
+      gap: 40px;
+
+      @include tab {
+        gap: 20px;
+      }
+      @include sp {
+        display: block;
+        margin-top: 50px;
+        width: 100%;
+        margin-right: 0;
+      }
+
+      &item {
+        font-family: $notosans-fonts;
+        min-width: 100%;
+        @include sp {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &img {
+        height: 196px;
+        margin-bottom: 14px;
+        overflow: hidden;
+
+        @include sp {
+          width: 34%;
+          height: 100%;
+          margin-bottom: 25px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          transition: 0.4s;
+        }
+      }
+
+      &text {
+        @include sp {
+          margin-top: 11px;
+          width: 61%;
+        }
+      }
+
+      &sub {
+        display: flex;
+        align-items: center;
+
+        @include tab {
+          flex-wrap: wrap;
+        }
+      }
+
+      &date {
+        font-size: 1.6rem;
+      }
+
+      &category {
+        margin-left: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 150px;
+        @include tab {
+          width: 50%;
+        }
+        @include sp {
+          margin-left: 4px;
+        }
+
+        span {
+          margin-left: 4px;
+          color: $green-01;
+        }
+      }
+
+      &new {
+        font-family: $main-fonts;
+        margin-left: 10px;
+        font-weight: bold;
+        color: $red-01;
+
+        @include tab {
+          display: none;
+        }
+        @include sp {
+          display: none;
+        }
+      }
+
+      &title {
+        font-weight: normal;
+        font-size: 2rem;
+        margin-top: 6px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        @include sp {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .c-btns {
+      position: absolute;
+      top: 17px;
+      right: 23px;
+      width: 100%;
+      max-width: 198px;
+
+      @include sp {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 26px auto 0;
+        max-width: 225px;
+      }
+
+      &__btn1 {
+        max-width: 100%;
+        height: 43px;
+
+        @include sp {
+          height: 48px;
+        }
+      }
+    }
+  }
+  /* END BLOG */
+  /* ======================================================== */
+  // NEST
+  .top-nest {
+    padding: 50px 0 137px;
+
+    @include sp {
+      padding: 53px 0 97px;
+    }
+
+    .l-container {
+      max-width: 1000px;
+    }
+
+    &__link {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__reform {
+      background: $white-01;
+      padding: 10px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: relative;
+
+      @include sp {
+        display: block;
+      }
+
+      @include sp {
+        background: $white-01;
+        padding: 5px 5px 20px;
+        height: 100%;
+      }
+
+      .c-title {
+        text-align: center;
+        width: 410px;
+        position: relative;
+        z-index: 2;
+        padding: 51px 20px 55px;
+
+        @include sp {
+          margin-top: 15px;
+          width: 100%;
+          padding: 0;
+        }
+
+        &__main {
+          font-size: 3.2rem;
+          letter-spacing: 3px;
+
+          @include sp {
+            font-size: 2.4rem;
+            letter-spacing: 2.5px;
+          }
+        }
+
+        &__sub {
+          font-size: 1.4rem;
+
+          @include sp {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    &__img {
+      position: absolute;
+      inset: 10px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      overflow: hidden;
+      @include sp {
+        position: relative;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        width: 67%;
+        transition: 0.4s;
+
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+
+    &__note {
+      text-align: center;
+      font-family: $notosans-fonts;
+      margin-top: 6px;
+      letter-spacing: 1px;
+
+      @include sp {
+        margin-top: 12px;
+        font-size: 1.3rem;
+      }
+
+      span {
+        position: relative;
+        color: $grey-02;
+
+        &::after {
+          position: absolute;
+          content: '';
+          background: url(../../assets/img/common/icon-1.png) no-repeat;
+          background-size: cover;
+          width: 13px;
+          height: 11px;
+          bottom: 3px;
+          right: -13px;
+        }
+      }
+    }
+  }
+  /* END NEST */
+  /* ======================================================== */
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}

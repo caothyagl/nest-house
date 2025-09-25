@@ -4,12 +4,15 @@
     Base
 ------------------------------------------------------------*/
 body {
-  font-family: $en-fonts;
+  overflow-x: hidden;
+  color: $black-01;
+  background: $white-02;
+  font-family: $main-fonts;
+  font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.5;
-  color: $black;
-  display: flex;
-  flex-direction: column;
+  text-size-adjust: 100%;
+  word-break: break-all;
 
   @include sp {
     min-width: 320px;

@@ -1,0 +1,264 @@
+<%- include('_layouts/base', {
+title: 'Contact page'
+}); -%>
+
+<!-- @meta -->
+<meta name="description" content="Contact page">
+<!-- @@meta -->
+
+<!-- @content -->
+<main class="contact">
+    <div class="c-mv">
+        <div class="c-mv__banner">
+            <img src="assets/img/contact/mainvisual-contact.jpg"
+                alt="各種お問い合わせ">
+        </div>
+        <div class="c-mv__title">
+            <div class="c-title">
+                <h2 class="c-title__main">CONTACT</h2>
+                <p class="c-title__sub">各種お問い合わせ</p>
+                <div class="c-title__img">
+                    <img
+                        src="assets/img/common/lemon-img.png"
+                        alt="各種お問い合わせ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-group">
+        <div class="l-container--960">
+            <p
+                class="contact-group__content">お困りなどがありましたら、お問い合わせフォームをご利用ください。<br>
+                資料請求もこちらからお願いいたします。お電話でのご相談もお受けしておりますのでお気軽にご相談ください。<br>
+                ※営業を目的としたお問合せはご遠慮ください※ </p>
+
+            <div class="contact-group__form" id="contact-form">
+                <form action="/contact.php" method="post"
+                    enctype="multipart/form-data">
+                    <div class="contact-group__row">
+                        <label
+                            class="contact-group__label contact-group__required u-mb-33">お問い合わせ項目</label>
+                        <div
+                            class="contact-group__field">
+                            <div
+                                class="contact-group__listradio">
+                                <label class="contact-group__item">
+                                    <input type="radio" name="inquiry"
+                                        value="お問い合わせ"
+                                        class="contact-group__radio"><span
+                                        class="contact-group__text">お問い合わせ</span>
+                                </label>
+                                <label class="contact-group__item">
+                                    <input type="radio" name="inquiry"
+                                        value="資料請求"
+                                        class="contact-group__radio"><span
+                                        class="contact-group__text">資料請求</span>
+                                </label>
+                                <label class="contact-group__item">
+                                    <input type="radio" name="inquiry"
+                                        value="オーナー宅見学申込"
+                                        class="contact-group__radio"><span
+                                        class="contact-group__text">オーナー宅見学申込</span>
+                                </label>
+                                <label class="contact-group__item">
+                                    <input type="radio" name="inquiry"
+                                        value="リフォームのご相談"
+                                        class="contact-group__radio"><span
+                                        class="contact-group__text">リフォームのご相談</span>
+                                </label>
+                                <label class="contact-group__item">
+                                    <input type="radio" name="inquiry"
+                                        value="不動産のご相談"
+                                        class="contact-group__radio"><span
+                                        class="contact-group__text">不動産のご相談</span>
+                                </label>
+                                <label class="contact-group__item">
+                                    <input type="radio" name="inquiry"
+                                        value="点検・メンテナンスのご相談"
+                                        class="contact-group__radio"><span
+                                        class="contact-group__text">点検・メンテナンスのご相談</span>
+                                </label>
+                            </div>
+                            <span
+                                class="contact-group__error js-error-radio"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-group__row">
+                        <label for="name"
+                            class="contact-group__label contact-group__required">お名前</label>
+
+                        <div class="contact-group__field">
+                            <input type="text" name="name"
+                                class="contact-group__input"
+                                placeholder="例）山田　太郎" id="name">
+                            <span
+                                class="contact-group__error js-error-name"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="contact-group__row">
+                        <label for="furigana"
+                            class="contact-group__label contact-group__required">ふりがな</label>
+
+                        <div class="contact-group__field">
+                            <input type="text"
+                                class="contact-group__input"
+                                placeholder="例）やまだ　たろう" id="furigana"
+                                name="furigana">
+                            <span
+                                class="contact-group__error js-error-furigana"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="contact-group__row">
+                        <label for="phone"
+                            class="contact-group__label contact-group__required">電話番号</label>
+
+                        <div class="contact-group__field">
+                            <input type="text"
+                                class="contact-group__input"
+                                placeholder="例）  0827-63-1681" id="phone"
+                                name="phone">
+                            <span
+                                class="contact-group__error js-error-phone"></span>
+                        </div>
+                    </div>
+
+                    <div class="contact-group__row">
+                        <label for="email"
+                            class="contact-group__label contact-group__required">メールアドレス</label>
+
+                        <div class="contact-group__field">
+                            <input type="email"
+                                class="contact-group__input js-error-email"
+                                placeholder="例）  yamadataro@example.com"
+                                id="email" name="email">
+                            <span
+                                class="contact-group__error js-error-email"></span>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="contact-group__row contact-group__top">
+                        <label for="message"
+                            class="contact-group__label">お問い合わせ内容</label>
+
+                        <div class="contact-group__field">
+                            <textarea cols="40" rows="10" maxlength="2000"
+                                class="contact-group__textarea"
+                                name="message" id="message"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="contact-group__row contact-group__top">
+                        <label
+                            class="contact-group__label">当社を知ったきっかけは？<span
+                                class="u-text-palt">（複数可）</span></label>
+
+                        <div class="contact-group__field">
+                            <div
+                                class="contact-group__listcheckbox">
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="紹介・口コミ"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">紹介・口コミ</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="ラジオ番組・CM"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">ラジオ番組・CM</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="Youtube 番組"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">Youtube
+                                        番組</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="Google 検索・Yahoo 検索等"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">Google
+                                        検索・Yahoo 検索等</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="建築現場・看板"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">建築現場・看板</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="雑誌・書籍"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">雑誌・書籍</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="SUUMO（雑誌・web）"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">SUUMO（雑誌・web）</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="Instagram"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">Instagram</span>
+                                </label>
+
+                                <label
+                                    class="contact-group__itemcheckbox">
+                                    <input type="checkbox" name="inquiry"
+                                        value="Facebook"
+                                        class="contact-group__checkbox"><span
+                                        class="contact-group__textcheckbox">Facebook</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-group__submit">
+                        <button type="submit"
+                            class="c-btn__fill c-btn__fill--danger c-submit">確認画面に進む</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="l-container">
+        <ul class="c-breadcrumb">
+            <li class="c-breadcrumb__item"><a href="index.html">トップ</a></li>
+            <li class="c-breadcrumb__item">お問い合わせ</li>
+        </ul>
+    </div>
+
+</main>
+<!-- @@content -->

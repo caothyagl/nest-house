@@ -1,32 +1,673 @@
-<%- include('_layouts/base', { title: 'Home page | Vite Template' }); -%>
+<%- include('_layouts/base', { title: 'Home page' }); -%>
 
 <!-- @meta -->
 <meta name="description" content="Home page">
 <!-- @@meta -->
 
 <!-- @content -->
-<main class="p-top">
-  <section class="c-mainvisual js-mainvisual">
-    <video class="c-mainvisual__bg" src="/assets/img/background.mp4" autoplay loop muted playsinline></video>
-    <div class="c-mainvisual__container">
-      <div class="l-container">
-        <h1>
-          The Vite Template<br>
-          for Production
-        </h1>
-        <p>
-          This template gives you the best developer experience<br>
-          with all the features you need for production
-        </p>
-        <a href="<%= baseUrl('#') %>" class="c-btn1">Read more</a>
-      </div>
+<main class="top">
+    <!-- MAIN VISUAL -->
+    <section class="top-mainvisual">
+        <div class="top-mainvisual__text">
+            <div class="top-mainvisual__text-img">
+                <img src="assets/img/common/tea-img.png"
+                    alt="何気ない日常に、ふと幸せを感じる瞬間を。">
+            </div>
+            <h2 class="top-mainvisual__text-title">
+                何気ない日常に、
+                <br>
+                ふと幸せを感じる<br class="pc-not">瞬間を。
+            </h2>
+            <p class="top-mainvisual__text-content">
+                In everyday life,
+                <br>
+                A moment when you feel happy.
+            </p>
+        </div>
+        <div class="top-mainvisual__carousel">
+            <!-- htmllint-disable -->
+            <div class="swiper top-mainvisual__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide c-slide__zoom">
+                        <img class="top-mainvisual__slider-img"
+                            src="assets/img/top/mainvisual-1.jpg"
+                            alt="何気ない日常にふと幸せを感じる瞬間を。">
+                    </div>
+                    <div class="swiper-slide c-slide__zoom">
+                        <img class="top-mainvisual__slider-img"
+                            src="assets/img/top/mainvisual-2.jpg"
+                            alt="何気ない日常にふと幸せを感じる瞬間を。">
+                    </div>
+                    <div class="swiper-slide c-slide__zoom">
+                        <img class="top-mainvisual__slider-img"
+                            src="assets/img/top/mainvisual-3.jpg"
+                            alt="何気ない日常にふと幸せを感じる瞬間を。">
+                    </div>
+                    <div class="swiper-slide c-slide__zoom">
+                        <img class="top-mainvisual__slider-img"
+                            src="assets/img/top/mainvisual-4.jpg"
+                            alt="何気ない日常にふと幸せを感じる瞬間を。">
+                    </div>
+                </div>
+            </div>
+            <!-- htmllint-enable -->
+        </div>
+        <a href="#" class="top-mainvisual__reservation">
+            <div class="top-mainvisual__reservation-img">
+                <img
+                    src="assets/img/common/icon-home-border.png"
+                    alt="RESERVATION">
+            </div>
+            <div class="top-mainvisual__reservation-content">
+                <p>RESERVATION</p>
+                <p>来場予約はこちら</p>
+            </div>
+        </a>
+    </section>
+    <!-- END MAINVISUAL -->
+    <!-- EVENT -->
+    <section class="top-event" id="s-event">
+        <div class="l-container">
+            <div class="c-title" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="c-title__main">EVENT</h2>
+                <p class="c-title__sub">イベント情報</p>
+            </div>
+            <div class="top-event__list">
+                <a href="#" class="top-event__item" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div class="top-event__itemimg">
+                        <img loading="lazy"
+                            src="assets/img/top/event-1.jpg"
+                            alt="【岩国市平田】FASTAモデルハウス見学会（完全予約制）を開催します。">
+                    </div>
+                    <div class="top-event__itemtext">
+                        <div class="top-event__category">
+                            <div
+                                class="top-event__cate top-event__cate--red">相談会</div>
+                            <div class="top-event__new">NEW</div>
+                        </div>
+                        <h3
+                            class="top-event__title">【岩国市平田】FASTAモデルハウス見学会（完全予約制）を開催します。</h3>
+                        <p
+                            class="top-event__content">開催日：2023年3月4日(土)～3月19日(日)</p>
+                    </div>
+                </a>
+                <a href="#" class="top-event__item" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <div class="top-event__itemimg">
+                        <img loading="lazy" src="assets/img/top/event-2.jpg"
+                            alt="【オンラインでも対応しています】いつでも家づくり相談会">
+                    </div>
+                    <div class="top-event__itemtext">
+                        <div class="top-event__category">
+                            <div
+                                class="top-event__cate top-event__cate--orange">見学会</div>
+                            <div
+                                class="top-event__cate top-event__cate--grey">終了</div>
+                        </div>
+                        <h3
+                            class="top-event__title">【オンラインでも対応しています】いつでも家づくり相談会</h3>
+                        <p class="top-event__content">開催日：随時開催</p>
+                    </div>
+                </a>
+                <a href="#" class="top-event__item" data-aos="fade-up"
+                    data-aos-delay="600">
+                    <div class="top-event__itemimg">
+                        <img loading="lazy" src="assets/img/top/event-3.jpg"
+                            alt="くらしのスクール「家具の選び方・くらしを豊かにする家具クラス」">
+                    </div>
+                    <div class="top-event__itemtext">
+                        <div class="top-event__category">
+                            <div
+                                class="top-event__cate top-event__cate--green">くらしのスクール</div>
+                            <div
+                                class="top-event__cate top-event__cate--grey">満席</div>
+                        </div>
+                        <h3
+                            class="top-event__title">くらしのスクール「家具の選び方・くらしを豊かにする家具クラス」</h3>
+                        <p class="top-event__content">開催日：2023年3月12日（日）</p>
+                    </div>
+                </a>
+            </div>
+            <div class="c-btns" data-aos="fade-up" data-aos-delay="700">
+                <a href="#" class="c-btns__btn1">VIEW ALL</a>
+            </div>
+        </div>
+    </section>
+    <!-- END EVENT -->
+    <!-- PARALLAX -->
+    <div class="c-parallax">
+        <div class="parallax parallax-pc"
+            data-parallax-image="assets/img/top/parallax-1.jpg"></div>
+        <div class="parallax parallax-sp"
+            data-parallax-image="assets/img/top/parallax-1-sp.jpg"></div>
+
+        <div class="c-parallax__container">
+            <div class="c-parallax__text">
+                <div class="c-parallax__textimg" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <img loading="lazy"
+                        src="assets/img/common/mountain-img.png"
+                        alt="いつもの毎日を楽しい“いつも”に。">
+                </div>
+                <h3 class="c-parallax__texttitle" data-aos="fade-up"
+                    data-aos-delay="500">
+                    いつもの毎日を
+                    <br>
+                    楽しい“いつも”に。
+                </h3>
+                <h4 class="c-parallax__textsub" data-aos="fade-up"
+                    data-aos-delay="600">
+                    Make your everyday life a fun “always”.
+                </h4>
+            </div>
+            <div class="c-parallax__content" data-aos="fade-up"
+                data-aos-delay="700">
+                <p>
+                    ゆたかな暮らしは、よい家だけでは完成しません。
+                    <br>
+                    暮らすことを今より楽しく面白く。
+                    <br>
+                    私たちネストハウスは、お客様のライフスタイルに合わせた家、家具、庭をトータルでご提案。
+                    <br>
+                    お客様ご家族のゆたかな人生を創造します。
+                </p>
+                <div class="c-btns">
+                    <a href="#" class="c-btns__btn2">MORE</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+    <!-- END PARALLAX -->
+    <!-- WORKS -->
+    <section class="top-works c-works">
+        <div class="l-wrapper">
+            <div class="c-title" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="c-title__main">WORKS</h2>
+                <p class="c-title__sub">施工事例</p>
+            </div>
+        </div>
+        <div class="top-works__list" data-aos="fade-up" data-aos-delay="400">
+            <div class="swiper top-works__slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide c-works__item">
+                        <div class="c-works__movie">
+                            <img loading="lazy"
+                                src="assets/img/common/movie-img.png"
+                                alt="movie">
+                        </div>
+                        <div class="c-works__img">
+                            <img loading="lazy"
+                                src="assets/img/top/works-1.jpg"
+                                alt="暮らしに便利な工夫がちりばめられた平屋の家">
+                        </div>
+                        <div class="c-works__text">
+                            <h3
+                                class="c-works__title">暮らしに便利な工夫がちりばめられた平屋の家</h3>
+                            <div class="c-works__category">
+                                <div class="c-works__cate">家族構成</div>
+                                <div class="c-works__cate">家の形</div>
+                                <div class="c-works__cate">坪数</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide c-works__item">
+                        <div class="c-works__img">
+                            <img loading="lazy"
+                                src="assets/img/top/works-2.jpg"
+                                alt="プライベート空間とデザインにこだわった平屋の家">
+                        </div>
+                        <div class="c-works__text">
+                            <h3
+                                class="c-works__title">プライベート空間とデザインにこだわった平屋の家</h3>
+                            <div class="c-works__category">
+                                <div class="c-works__cate">家族構成</div>
+                                <div class="c-works__cate">家の形</div>
+                                <div class="c-works__cate">坪数</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide c-works__item">
+                        <div class="c-works__img">
+                            <img loading="lazy"
+                                src="assets/img/top/works-3.jpg"
+                                alt="和の落ち着きと自然が暮らしにとけこむ家">
+                        </div>
+                        <div class="c-works__text">
+                            <h3
+                                class="c-works__title">和の落ち着きと自然が暮らしにとけこむ家</h3>
+                            <div class="c-works__category">
+                                <div class="c-works__cate">家族構成</div>
+                                <div class="c-works__cate">家の形</div>
+                                <div class="c-works__cate">坪数</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide c-works__item">
+                        <div class="c-works__movie">
+                            <img loading="lazy"
+                                src="assets/img/common/movie-img.png"
+                                alt="movie">
+                        </div>
+                        <div class="c-works__img">
+                            <img loading="lazy"
+                                src="assets/img/top/works-1.jpg"
+                                alt="暮らしに便利な工夫がちりばめられた平屋の家">
+                        </div>
+                        <div class="c-works__text">
+                            <h3
+                                class="c-works__title">暮らしに便利な工夫がちりばめられた平屋の家</h3>
+                            <div class="c-works__category">
+                                <div class="c-works__cate">家族構成</div>
+                                <div class="c-works__cate">家の形</div>
+                                <div class="c-works__cate">坪数</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide c-works__item">
+                        <div class="c-works__img">
+                            <img loading="lazy"
+                                src="assets/img/top/works-2.jpg"
+                                alt="プライベート空間とデザインにこだわった平屋の家">
+                        </div>
+                        <div class="c-works__text">
+                            <h3
+                                class="c-works__title">プライベート空間とデザインにこだわった平屋の家</h3>
+                            <div class="c-works__category">
+                                <div class="c-works__cate">家族構成</div>
+                                <div class="c-works__cate">家の形</div>
+                                <div class="c-works__cate">坪数</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide c-works__item">
+                        <div class="c-works__img">
+                            <img loading="lazy"
+                                src="assets/img/top/works-3.jpg"
+                                alt="和の落ち着きと自然が暮らしにとけこむ家">
+                        </div>
+                        <div class="c-works__text">
+                            <h3
+                                class="c-works__title">和の落ち着きと自然が暮らしにとけこむ家</h3>
+                            <div class="c-works__category">
+                                <div class="c-works__cate">家族構成</div>
+                                <div class="c-works__cate">家の形</div>
+                                <div class="c-works__cate">坪数</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+        <div class="c-btns" data-aos="fade-up" data-aos-delay="500">
+            <a href="works.html" class="c-btns__btn1">VIEW ALL</a>
+        </div>
+    </section>
+    <!-- END WORKS -->
+    <!-- LINEUP -->
+    <section class="top-lineup" id="s-lineup">
+        <div class="l-container">
+            <div class="top-lineup__list">
+                <div class="top-lineup__listtext" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="c-title">
+                        <h2 class="c-title__main">LINEUP</h2>
+                        <p class="c-title__sub">ラインナップ</p>
+                    </div>
+                    <div
+                        class="top-lineup__des">豊かな暮らしを叶えるネストハウスの家づくりをご紹介します。</div>
+                    <div class="c-btns">
+                        <a href="#" class="c-btns__btn1">VIEW ALL</a>
+                    </div>
+                    <div class="top-lineup__bagimg">
+                        <img loading="lazy"
+                            src="assets/img/common/bag-img.png" alt="ラインナップ">
+                    </div>
+                </div>
+                <div class="top-lineup__listitems" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div class="top-lineup__item">
+                        <div class="top-lineup__viewimg">
+                            <picture>
+                                <source
+                                    srcset="assets/img/top/lineup-1-sp.jpg"
+                                    media="(max-width: 767px)">
+                                <img loading="lazy"
+                                    src="assets/img/top/lineup-1.jpg"
+                                    alt="いつまでも色あせず標準であり続ける家">
+                            </picture>
+                        </div>
+                        <p class="top-lineup__content">いつまでも色あせず標準であり続ける家</p>
+                        <h2 class="top-lineup__title">FASTA</h2>
+                    </div>
+                    <div class="top-lineup__item">
+                        <div class="top-lineup__viewimg">
+                            <picture>
+                                <source
+                                    srcset="assets/img/top/lineup-2-sp.jpg"
+                                    media="(max-width: 767px)">
+                                <img loading="lazy"
+                                    src="assets/img/top/lineup-2.jpg"
+                                    alt="新しい「間」を創造する現代の和風住宅">
+                            </picture>
+                        </div>
+                        <p class="top-lineup__content">新しい「間」を創造する現代の和風住宅</p>
+                        <h2 class="top-lineup__title">MAno</h2>
+                    </div>
+                    <div class="top-lineup__item">
+                        <div class="top-lineup__viewimg">
+                            <picture>
+                                <source
+                                    srcset="assets/img/top/lineup-3-sp.jpg"
+                                    media="(max-width: 767px)">
+                                <img loading="lazy"
+                                    src="assets/img/top/lineup-3.jpg"
+                                    alt="一棟一作主義でつくる日本伝統の和風建築">
+                            </picture>
+                        </div>
+                        <p class="top-lineup__content">一棟一作主義でつくる日本伝統の和風建築</p>
+                        <h2
+                            class="top-lineup__title top-lineup__titlenoto">蔵掛の家</h2>
+                    </div>
+                    <div class="top-lineup__item">
+                        <div class="top-lineup__viewimg">
+                            <picture>
+                                <source
+                                    srcset="assets/img/top/lineup-4-sp.jpg"
+                                    media="(max-width: 767px)">
+                                <img loading="lazy"
+                                    src="assets/img/top/lineup-4.jpg"
+                                    alt="もっと自由で快適な平屋暮らしを">
+                            </picture>
+                        </div>
+                        <p class="top-lineup__content">もっと自由で快適な平屋暮らしを</p>
+                        <h2
+                            class="top-lineup__title top-lineup__titlenoto">平屋</h2>
+                    </div>
+                </div>
+
+                <div class="pc-not">
+                    <div class="c-btns" data-aos="fade-up" data-aos-delay="500">
+                        <a href="#" class="c-btns__btn1">VIEW ALL</a>
+                    </div>
+                    <div class="top-lineup__bagimg" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <img loading="lazy"
+                            src="assets/img/common/bag-img.png" alt="ラインナップ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END LINEUP -->
+    <!-- MODEL HOUSE -->
+    <section class="top-model" id="s-model">
+        <div class="c-parallax">
+            <div class="parallax"
+                data-parallax-image="assets/img/top/parallax-2.jpg"></div>
+        </div>
+
+        <div class="l-wrapper">
+            <div class="l-container">
+                <div class="c-title" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="c-title__main">MODEL <br
+                            class="only-sp">HOUSE</h2>
+                    <p class="c-title__sub">モデルハウス</p>
+                </div>
+                <div
+                    class="top-model__des" data-aos="fade-up"
+                    data-aos-delay="400">まずはお気軽にモデルハウスをご見学ください。設計士が家づくりのポイントをお話しながらご案内させていただきます。</div>
+            </div>
+            <div class="top-model__list" data-aos="fade-up"
+                data-aos-delay="500">
+                <div class="top-model__item">
+                    <div class="top-model__img">
+                        <picture>
+                            <source
+                                srcset="assets/img/top/model-1-sp.jpg"
+                                media="(max-width: 767px)">
+                            <img loading="lazy"
+                                src="assets/img/top/model-1.jpg"
+                                alt="FASTA｜フラッグシップモデル">
+                        </picture>
+                    </div>
+                    <h3 class="top-model__title">FASTA｜フラッグシップモデル</h3>
+                    <p class="top-model__content">
+                        <span>岩国市保津町2丁目6番</span>
+                    </p>
+                </div>
+                <div class="top-model__item">
+                    <div class="top-model__img">
+                        <picture>
+                            <source
+                                srcset="assets/img/top/model-2-sp.jpg"
+                                media="(max-width: 767px)">
+                            <img loading="lazy"
+                                src="assets/img/top/model-2.jpg"
+                                alt="FASTA｜ZEHモデル">
+                        </picture>
+                    </div>
+                    <h3 class="top-model__title">FASTA｜ZEHモデル</h3>
+                    <p class="top-model__content">
+                        <span>岩国市由宇町3915番地</span>
+                    </p>
+                </div>
+                <div class="top-model__item">
+                    <div class="top-model__img">
+                        <picture>
+                            <source
+                                srcset="assets/img/top/model-3-sp.jpg"
+                                media="(max-width: 767px)">
+                            <img loading="lazy"
+                                src="assets/img/top/model-3.jpg"
+                                alt="COCOYUKA｜国交省認定工法モデル">
+                        </picture>
+                    </div>
+                    <h3 class="top-model__title">COCOYUKA｜国交省認定工法モデル</h3>
+                    <p class="top-model__content">
+                        <span>岩国市南岩国町4丁目</span>
+                    </p>
+                </div>
+            </div>
+            <div class="c-btns" data-aos="fade-up" data-aos-delay="600">
+                <a href="#" class="c-btns__btn1">VIEW ALL</a>
+            </div>
+        </div>
+    </section>
+    <!-- END MODEL HOUSE -->
+    <!-- VOICE -->
+    <section class="top-voice c-voice">
+        <div class="l-container">
+            <div class="top-voice__list">
+                <div class="top-voice__listtext" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="top-voice__bookimg">
+                        <img loading="lazy"
+                            src="assets/img/common/book-img.png" alt="お客様の声">
+                    </div>
+                    <div class="c-title">
+                        <h2 class="c-title__main">VOICE</h2>
+                        <p class="c-title__sub">お客様の声</p>
+                    </div>
+
+                    <div class="c-btns">
+                        <a href="voice.html" class="c-btns__btn1">VIEW ALL</a>
+                    </div>
+
+                </div>
+                <div class="top-voice__listitems c-voice__listitems"
+                    data-aos="fade-up"
+                    data-aos-delay="400">
+                    <a href="voice_detail.html"
+                        class="top-voice__item c-voice__item">
+                        <div class="top-voice__movie c-voice__movie">
+                            <img loading="lazy"
+                                src="assets/img/common/movie-img.png"
+                                alt="movie">
+                        </div>
+                        <div class="top-voice__viewimg c-voice__viewimg">
+                            <picture>
+                                <img loading="lazy"
+                                    src="assets/img/top/voice-1.jpg"
+                                    alt="平生町 I様邸">
+                            </picture>
+                        </div>
+                        <h2
+                            class="top-voice__title c-voice__title">いつも気兼ねなくお話しすることができました。</h2>
+                        <p class="top-voice__content c-voice__content">平生町 I様邸
+                        </p>
+                        <div class="c-btns">
+                            <span
+                                class="c-btns__btn2">MORE</span>
+                        </div>
+                    </a>
+
+                    <a href="voice_detail.html"
+                        class="top-voice__item c-voice__item">
+                        <div class="top-voice__viewimg c-voice__viewimg">
+                            <picture>
+                                <img loading="lazy"
+                                    src="assets/img/top/voice-2.jpg"
+                                    alt="平生町 I様邸">
+                            </picture>
+                        </div>
+                        <h2
+                            class="top-voice__title c-voice__title">いつも気兼ねなくお話しすることができました。</h2>
+                        <p class="top-voice__content c-voice__content">平生町 I様邸
+                        </p>
+                        <div class="c-btns">
+                            <span
+                                class="c-btns__btn2">MORE</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pc-not">
+                    <div class="c-btns c-btns__voice" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <a href="voice.html" class="c-btns__btn1">VIEW ALL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END VOICE -->
+    <!-- BLOG -->
+    <section class="top-blog">
+        <div class="l-container l-container--flex">
+            <div class="c-title" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="c-title__main">BLOG</h2>
+                <p class="c-title__sub">ブログ</p>
+            </div>
+
+            <div class="top-blog__list">
+                <a href="blog_detail.html" class="top-blog__listitem"
+                    data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div class="top-blog__listimg">
+                        <img loading="lazy" src="assets/img/top/blog-1.jpg"
+                            alt="岩国ロードレース">
+                    </div>
+                    <div class="top-blog__listtext">
+                        <div class="top-blog__listsub">
+                            <div class="top-blog__listdate">
+                                2022.12.26
+                            </div>
+                            <div class="top-blog__listcategory">
+                                - <span>スタッフブログ</span>
+                            </div>
+                            <div class="top-blog__listnew">
+                                NEW
+                            </div>
+                        </div>
+                        <h3 class="top-blog__listtitle">岩国ロードレース
+                        </h3>
+                    </div>
+                </a>
+
+                <a href="blog_detail.html" class="top-blog__listitem"
+                    data-aos="fade-up"
+                    data-aos-delay="500">
+                    <div class="top-blog__listimg">
+                        <img loading="lazy" src="assets/img/top/blog-2.jpg"
+                            alt="祝！N様邸お引渡し式を行いま…">
+                    </div>
+                    <div class="top-blog__listtext">
+                        <div class="top-blog__listsub">
+                            <div class="top-blog__listdate">
+                                2022.05.26
+                            </div>
+                            <div class="top-blog__listcategory">
+                                - <span>現場だより</span>
+                            </div>
+                        </div>
+                        <h3 class="top-blog__listtitle">祝！N様邸お引渡し式を行いま…
+                        </h3>
+                    </div>
+                </a>
+
+                <a href="blog_detail.html" class="top-blog__listitem"
+                    data-aos="fade-up"
+                    data-aos-delay="600">
+                    <div class="top-blog__listimg">
+                        <img loading="lazy" src="assets/img/top/blog-3.jpg"
+                            alt="土地情報追加のお知らせ">
+                    </div>
+                    <div class="top-blog__listtext">
+                        <div class="top-blog__listsub">
+                            <div class="top-blog__listdate">
+                                2022.03.26
+                            </div>
+                            <div class="top-blog__listcategory">
+                                - <span>お知らせ</span>
+                            </div>
+                        </div>
+                        <h3 class="top-blog__listtitle">土地情報追加のお知らせ
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="c-btns" data-aos="fade-up" data-aos-delay="700">
+                <a href="blog.html" class="c-btns__btn1">VIEW ALL</a>
+            </div>
+        </div>
+    </section>
+    <!-- END BLOG -->
+    <!-- NEST -->
+    <section class="top-nest">
+        <div class="l-container">
+            <a href="#" data-aos="fade-up"
+                data-aos-delay="300" class="top-nest__link">
+                <div class="top-nest__reform">
+                    <div class="top-nest__img">
+                        <picture>
+                            <source
+                                srcset="assets/img/top/blog-4-sp.jpg"
+                                media="(max-width: 767px)">
+                            <img loading="lazy"
+                                src="assets/img/top/blog-4-pc--back.jpg"
+                                alt="リフォーム・リノベーション">
+                        </picture>
+                    </div>
+                    <div class="c-title">
+                        <h2 class="c-title__main">NEST REFORM</h2>
+                        <p class="c-title__sub">リフォーム・リノベーション</p>
+                    </div>
+                </div>
+
+                <div class="top-nest__note"
+                    data-aos="fade-up"
+                    data-aos-delay="400"><span>外部サイトへ移動します。</span></div>
+            </a>
+
+        </div>
+    </section>
+    <!-- END NEST -->
 </main>
 <!-- @@content -->
 
 <!-- @script -->
-<script>
-  console.log("home page");
-</script>
+
 <!-- @@script -->

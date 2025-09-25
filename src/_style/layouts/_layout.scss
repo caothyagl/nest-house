@@ -1,13 +1,30 @@
 @use '../abstracts/' as *;
 
-$-padding: 50px;
+$-padding: 20px;
 
 /*------------------------------------------------------------
     Layout
 ------------------------------------------------------------*/
 .l-container {
   width: 100%;
-  max-width: $base-width + ($-padding * 2);
+  max-width: $base-width;
   margin: 0 auto;
   padding: 0 $-padding;
 }
+
+.l-wrapper {
+  width: 100%;
+  max-width: $wrapper-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.l-container--960 {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//-------------------------------------------------------

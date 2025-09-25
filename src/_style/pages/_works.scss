@@ -1,0 +1,58 @@
+@use '../abstracts/' as *;
+/*------------------------------------------------------------
+Css of works page
+------------------------------------------------------------*/
+.works {
+  .c-mv__banner {
+    img {
+      top: 11%;
+      @include sp {
+        top: 50%;
+      }
+    }
+  }
+
+  &-product {
+    margin: 100px 0 144px;
+
+    @include sp {
+      margin: 50px 0;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      row-gap: 42px;
+      margin-bottom: 43px;
+
+      @include tab {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      @include sp {
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .c-works__item {
+    @include tab {
+      max-width: 100%;
+    }
+  }
+
+  .c-works__img {
+    @include tab {
+      height: fit-content;
+    }
+
+    img {
+      @include tabpc {
+        object-fit: cover;
+      }
+    }
+  }
+}

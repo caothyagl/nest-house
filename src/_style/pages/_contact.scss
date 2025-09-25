@@ -1,0 +1,372 @@
+@use '../abstracts/' as *;
+/*------------------------------------------------------------
+Css of contact page
+------------------------------------------------------------*/
+.c-mv__banner img {
+  top: 50%;
+  @include sp {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.contact-group {
+  padding-block: 93px 149px;
+  @include tab {
+    padding-block: 60px 70px;
+  }
+
+  &__content {
+    font-size: 1.6rem;
+    line-height: 1.875;
+    font-weight: 400;
+    font-family: $notosans-fonts;
+    text-align: center;
+    padding-left: 10px;
+
+    @include sp {
+      font-size: 1.4rem;
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+
+  .bg-w {
+    background: $white-01;
+  }
+
+  .u-text-palt {
+    width: 100%;
+  }
+
+  &__form {
+    margin-top: 10px;
+  }
+
+  &__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-block: 50.3px;
+    border-top: 1px solid #d7dbe3;
+
+    &:first-child {
+      border-top: 0;
+    }
+    @include tab {
+      padding-block: 40px;
+    }
+    @include sp {
+      padding-block: 25px 30px;
+    }
+  }
+
+  &__label {
+    width: 260px;
+    font-size: 1.6rem;
+    font-family: $notosans-fonts;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    @include sp {
+      width: 100%;
+      font-size: 1.4rem;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      gap: 0 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__required::after {
+    content: '必 須';
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1;
+    background: #476c53;
+    color: #fff;
+    width: 50px;
+    aspect-ratio: 50 / 24;
+    padding-bottom: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 30px;
+    box-sizing: border-box;
+    @include sp {
+      margin-right: 0;
+      font-size: 1rem;
+      width: 40px;
+    }
+  }
+
+  &__field {
+    width: calc(100% - 260px);
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px 0;
+    flex-wrap: wrap;
+    background: $white-01;
+    @include sp {
+      width: 100%;
+      gap: 10px;
+    }
+  }
+
+  &__listradio {
+    display: grid;
+    padding: 28px 30px;
+    grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%);
+    gap: 15px 31px;
+    position: relative;
+
+    @include sp {
+      padding: 20px 15px;
+      gap: 15px 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__listcheckbox {
+    gap: 13px 0;
+    padding: 27px 30px 28px;
+    background: #fff;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    @include sp {
+      padding: 20px 15px;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    margin: 0;
+    @include sp {
+      width: 50%;
+    }
+  }
+
+  &__itemcheckbox {
+    width: 35.5%;
+    cursor: pointer;
+    margin: 0;
+
+    &:nth-of-type(3n + 2) {
+      width: 25.5%;
+    }
+
+    @include tab {
+      width: 50% !important;
+    }
+
+    @include sp {
+      width: 100% !important;
+    }
+  }
+
+  &__text {
+    padding: 0 0 0 20px;
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+    font-family: $notosans-fonts;
+
+    @include sp {
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+
+    &::before,
+    &::after {
+      content: ' ';
+    }
+
+    &::before {
+      content: '';
+      width: 16px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 1px solid #d7dbe3;
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-sizing: border-box;
+    }
+  }
+
+  &__textcheckbox {
+    padding-left: 20px;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    font-family: $notosans-fonts;
+    position: relative;
+    color: #222;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+
+    &::before,
+    &::after {
+      content: ' ';
+    }
+
+    &::before {
+      content: '';
+      width: 14px;
+      aspect-ratio: 1 / 1;
+      box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+
+    &::after {
+      content: '';
+      width: 6px;
+      aspect-ratio: 8 / 5;
+      position: absolute;
+      left: 2.5px;
+      top: 8px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__radio {
+    position: absolute;
+    z-index: -999;
+    opacity: 0;
+  }
+
+  &__radio:checked ~ span::after {
+    content: '';
+    width: 8px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #333;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: -999;
+    opacity: 0;
+  }
+
+  &__checkbox:checked ~ span::before {
+    background: #333;
+    border-color: #333;
+  }
+
+  &__checkbox:checked ~ span::after {
+    content: '';
+    width: 6px;
+    aspect-ratio: 8 / 5;
+    position: absolute;
+    left: 2.5px;
+    top: 8px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+  }
+
+  &__input,
+  &__textarea {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    min-height: 60px;
+    font-family: $notosans-fonts;
+    border-radius: 0;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: #476c53;
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    height: 294px;
+    resize: none;
+  }
+
+  &__top {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  &__error {
+    color: #e74c3c;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-weight: normal;
+    display: block;
+
+    @include sp {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}

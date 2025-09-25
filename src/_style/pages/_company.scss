@@ -1,0 +1,374 @@
+@use '../abstracts/' as *;
+/*------------------------------------------------------------
+Css of company page
+------------------------------------------------------------*/
+.company {
+  .c-mv__banner {
+    img {
+      top: 50%;
+    }
+  }
+
+  .parallax__container {
+    opacity: 1;
+  }
+}
+
+.company-info,
+.company-history {
+  background: $white-03;
+  padding-block: 87px 0;
+
+  @include sp {
+    padding-block: 50px 0;
+  }
+
+  &__table {
+    margin-top: 50px;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    @include sp {
+      margin-top: 30px;
+    }
+
+    tr,
+    td {
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding-block: 32px;
+      padding-left: 35px;
+      font-family: $notosans-fonts;
+      font-size: 1.6rem;
+      line-height: 2;
+      font-weight: 400;
+      color: #222;
+      border-block: 1px solid #ccc;
+      @include sp {
+        border-top: 1px solid #ccc;
+        border-bottom: 0;
+        font-size: 1.4rem;
+        padding-block: 15px;
+        padding-left: 10px;
+        width: 100%;
+        display: block;
+      }
+    }
+
+    th {
+      width: 265px;
+      vertical-align: top;
+      @include sp {
+        width: 100%;
+      }
+    }
+
+    td {
+      @include sp {
+        border-top-style: unset;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__table1 {
+    margin-top: 52px;
+
+    th,
+    td {
+      font-family: $jp-fonts;
+      font-weight: 500;
+    }
+
+    td {
+      line-height: 1.9;
+      padding-block: 31px;
+
+      @include sp {
+        padding-block: 15px;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .c-lh {
+    line-height: 1.86;
+  }
+
+  address {
+    font-style: normal;
+
+    a {
+      background: #bdab69;
+      color: #fff;
+      padding: 3.5px 10px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1;
+      vertical-align: -1px;
+      margin-left: 36px;
+      @include sp {
+        margin-left: 0;
+        display: inline-block;
+        font-size: 1rem;
+        vertical-align: 0;
+        padding: 3px 8px 4px;
+        border-radius: 3px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__banner {
+    margin-top: 100px;
+    aspect-ratio: 1366 / 400;
+    z-index: 1;
+
+    @include sp {
+      margin-top: 50px;
+      width: 100%;
+      aspect-ratio: unset;
+      height: 240px;
+    }
+  }
+
+  .c-parallax::after {
+    display: none;
+  }
+}
+
+.company-message {
+  padding-block: 93px 100px;
+
+  @include sp {
+    padding-block: 50px 60px;
+  }
+
+  &__block {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include sp {
+      margin-top: 30px;
+    }
+  }
+
+  &__content {
+    width: 68.75%;
+    padding-right: 5%;
+
+    @include sp {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1;
+      text-indent: -1.5rem;
+      font-family: $notosans-fonts;
+      @include sp {
+        text-indent: -1rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2;
+      font-weight: 400;
+      margin-top: 38px;
+      font-family: $notosans-fonts;
+      @include sp {
+        margin-top: 20px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__img {
+    width: 31.25%;
+
+    @include sp {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__caption {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 14px;
+
+    &-position {
+      font-size: 1.6rem;
+      font-family: $notosans-fonts;
+      @include sp {
+        font-size: 1.4rem;
+      }
+    }
+
+    &-name {
+      font-size: 2.4rem;
+      font-family: $notosans-fonts;
+      @include sp {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-en {
+      text-transform: uppercase;
+      color: #476c53;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+.company-area {
+  padding-block: 88px 100px;
+
+  @include sp {
+    padding-block: 50px 60px;
+  }
+
+  &__txt {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: 400;
+    color: $black-04;
+    margin-top: 41px;
+    @include sp {
+      margin-top: 30px;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__map {
+    margin-top: 40px;
+
+    @include sp {
+      margin-top: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.company-access {
+  padding-block: 90px 98px;
+
+  @include sp {
+    padding-block: 50px 60px;
+  }
+
+  &__list {
+    margin-top: 70px;
+
+    @include sp {
+      margin-top: 30px;
+    }
+
+    &-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+
+      &:not(:first-child) {
+        margin-top: 65px;
+
+        h3 {
+          font-size: 2.4rem;
+        }
+
+        p {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    &-content {
+      width: 43.75%;
+      padding-right: 6.25%;
+      @include sp {
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &-txt {
+      padding-top: 15px;
+
+      h3,
+      p {
+        font-family: $notosans-fonts;
+      }
+    }
+
+    &-map {
+      width: 56.25%;
+      @include sp {
+        width: 100%;
+        padding-top: 20px;
+      }
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 540 / 360;
+      height: auto;
+    }
+  }
+
+  &__list-txt {
+    h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #476c53;
+      @include sp {
+        font-size: 1.8rem;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2;
+      font-weight: 400;
+      margin-top: 6px;
+      @include sp {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

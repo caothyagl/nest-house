@@ -1,10 +1,252 @@
 @use '../abstracts/' as *;
-
 /*------------------------------------------------------------
-    About page
+Css of about page
 ------------------------------------------------------------*/
-.p-about {
-  &1 {
-    padding: 100px 0;
+.about {
+  padding-top: 130px;
+
+  &-mainvisual {
+    position: relative;
+
+    &--pin {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        background: url(../../assets/img/about/background-about-1.png) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: calc(100% - 320px);
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-image: url(../../assets/img/about/background-about.jpg);
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: -90;
+      }
+    }
+
+    .l-container {
+      max-width: 1000px;
+    }
+
+    &__text {
+      width: 100%;
+      height: calc(100vh - 372px);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      margin-top: -12px;
+      @include tab {
+        margin-top: 0;
+        padding-top: 100px;
+      }
+      @include sp {
+        padding-top: 50px;
+      }
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      font-weight: normal;
+      letter-spacing: 1.5px;
+      margin-bottom: 28px;
+      filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 10px #fff)
+        drop-shadow(0 0 10px #fff) drop-shadow(0 0 10px #fff);
+      @include sp {
+        margin-bottom: 14px;
+      }
+    }
+
+    &__sub {
+      font-size: 4rem;
+      font-family: $notosans-fonts;
+      font-weight: normal;
+      letter-spacing: 4px;
+      filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 20px #fff)
+        drop-shadow(0 0 40px #fff) drop-shadow(0 0 10px #fff);
+      @include sp {
+        font-size: 3rem;
+      }
+    }
+
+    &__concept {
+      padding: 215px 0 126px;
+      @include sp {
+        padding: 250px 0 50px;
+      }
+
+      p {
+        position: relative;
+        z-index: 1;
+        font-size: 1.6rem;
+        line-height: 2.5;
+        font-family: $notosans-fonts;
+
+        @include sp {
+          font-size: 1.4rem;
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  &-building {
+    padding: 78px 0 0;
+    background: $white-02;
+
+    .l-wrapper {
+      margin-bottom: 84px;
+      @include sp {
+        margin-bottom: 50px;
+      }
+    }
+    @include sp {
+      padding: 50px 0 0;
+    }
+
+    .c-title {
+      text-align: center;
+    }
+
+    .l-wrapper {
+      max-width: 1000px;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 70px;
+
+      @include sp {
+        margin-top: 30px;
+      }
+    }
+
+    &__item {
+      width: 46.9%;
+      margin-bottom: 61px;
+
+      @include tab {
+        width: 48.5%;
+      }
+      @include sp {
+        width: 100%;
+        height: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__img {
+      height: 225px;
+      margin-bottom: 12px;
+
+      @include sp {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__flex {
+      display: flex;
+      position: relative;
+      padding-right: 65px;
+
+      &::after {
+        position: absolute;
+      }
+
+      @include tab {
+        display: block;
+      }
+    }
+
+    &__number {
+      font-size: 6rem;
+      color: $white-02;
+      line-height: 1;
+      text-shadow: -1px -1px 0 $orange-01, 1px -1px 0 $orange-01,
+        -1px 1px 0 $orange-01, 1px 1px 0 $orange-01;
+      margin-right: 20px;
+
+      @include tab {
+        font-size: 5.5rem;
+      }
+
+      @include sp {
+        font-size: 5rem;
+      }
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      color: $green-01;
+
+      @include sp {
+        font-size: 2rem;
+      }
+    }
+
+    &__content {
+      font-size: 1.4rem;
+      font-family: $notosans-fonts;
+      @include sp {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__link {
+      background: $orange-01;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+
+      img {
+        width: 20px;
+        margin-bottom: 5px;
+      }
+    }
   }
 }
