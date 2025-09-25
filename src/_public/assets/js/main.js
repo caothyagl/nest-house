@@ -34,7 +34,7 @@ function handleMenu() {
 function scrollToTop() {
   const $backtotop = $('#s-backtotop')
   const $header = $('#header')
-  const $groupBtn = $('.c-group__btns')
+  const $groupBtn = $('.c-footer__group-btn')
 
   $(window).on('load scroll', function () {
     const scrollTop = $(this).scrollTop()

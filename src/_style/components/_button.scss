@@ -115,9 +115,9 @@
 
     &:hover {
       opacity: 1;
-      background: $black-02;
+      background: $green-01;
       color: $white-01;
-      border: 1px solid $black-02;
+      border: 1px solid $green-01;
 
       &::before {
         background: url(../../assets/img/common/icon-arr-left.png) no-repeat;
@@ -187,7 +187,7 @@
 
     &:hover {
       opacity: 1;
-      background: $black-02;
+      background: $green-01;
       color: $white-01;
     }
   }
